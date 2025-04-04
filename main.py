@@ -18,8 +18,13 @@ warnings.filterwarnings("ignore", category=UserWarning, module="langsmith.client
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}}, supports_credentials=True)
 
+# CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}}, supports_credentials=True)
+
+CORS(app, origins=[
+    "http://localhost:5173",
+    "https://ai-portfolio-tcf4.onrender.com"
+])
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 # openai model 
