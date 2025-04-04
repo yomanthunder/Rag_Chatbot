@@ -12,6 +12,9 @@ from langchain import hub
 import os
 from dotenv import load_dotenv
 
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning, module="langsmith.client")
+
 load_dotenv()
 app = Flask(__name__)
 
