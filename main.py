@@ -11,12 +11,14 @@ from langchain_text_splitters import CharacterTextSplitter
 from langchain import hub
 import os
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning, module="langsmith.client")
 
 load_dotenv()
 app = Flask(__name__)
+CORS(app)
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
