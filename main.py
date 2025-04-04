@@ -18,7 +18,7 @@ warnings.filterwarnings("ignore", category=UserWarning, module="langsmith.client
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}}, supports_credentials=True)
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
@@ -49,15 +49,21 @@ rag_chain = (
     | StrOutputParser()
 )
 
+
 @app.route("/ask", methods=["POST"])
 def ask():
-    data = request.json
-    question = data.get("question", "")
-    if not question:
-        return jsonify({"error": "No question provided"}), 400
+    try:
+        data = request.json
+        question = data.get("question", "")
+        if not question:
+            return jsonify({"error": "No question provided"}), 400
 
-    response = rag_chain.invoke(question)
-    return jsonify({"answer": response})
+        response = rag_chain.invoke(question)
+        return jsonify({"answer": response})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
