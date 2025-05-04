@@ -20,8 +20,14 @@ load_dotenv()
 app = Flask(__name__)
 
 CORS(app, resources={
-    r"/ask": {"origins": ["http://localhost:5173", "https://portfoilio-shrishveshs-projects.vercel.app/"]}
+    r"/ask": {
+        "origins": [
+            "http://localhost:5173",
+            "https://portfoilio-shrishveshs-projects.vercel.app"
+        ]
+    }
 })
+
 
 
 # openai model 
