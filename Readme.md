@@ -1,1 +1,1 @@
-## THis The Rag chatbot of my personal portfolio
+## This is the Rag Chatbot of my personal portfolio
