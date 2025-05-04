@@ -4,16 +4,13 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.llms import OpenAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
-from langchain_openai import OpenAIEmbeddings
-from langchain_openai import ChatOpenAI
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+
 from langchain_text_splitters import CharacterTextSplitter
 from langchain import hub
 import os
 from dotenv import load_dotenv
 from flask_cors import CORS
 from langchain_groq import ChatGroq
-from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 from langchain_community.embeddings import HuggingFaceInferenceAPIEmbeddings
 
 import warnings
