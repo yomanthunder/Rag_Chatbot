@@ -7,4 +7,3 @@ python-dotenv
 flask_cors
 faiss-cpu
 langchain-groq
-langchain_huggingface
