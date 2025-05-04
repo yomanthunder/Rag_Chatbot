@@ -12,6 +12,9 @@ from langchain import hub
 import os
 from dotenv import load_dotenv
 from flask_cors import CORS
+from langchain_groq import ChatGroq
+from langchain_huggingface.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceInferenceAPIEmbeddings
 
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning, module="langsmith.client")
@@ -19,25 +22,35 @@ warnings.filterwarnings("ignore", category=UserWarning, module="langsmith.client
 load_dotenv()
 app = Flask(__name__)
 
-# CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}}, supports_credentials=True)
+CORS(app, resources={
+    r"/ask": {"origins": ["http://localhost:5173", "https://portfoilio-shrishveshs-projects.vercel.app/", "https://portfoilio-nine.vercel.app/"]}
+})
 
-CORS(app, origins=[
-    "http://localhost:5173",
-    "https://ai-portfolio-tcf4.onrender.com"
-])
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 # openai model 
-llm = ChatOpenAI(model="gpt-4o")
+llm = ChatGroq(
+    model="llama-3.1-8b-instant",
+    temperature=0,
+    max_tokens=None,
+    timeout=None,
+    max_retries=2,
+    # other params...
+    api_key=os.getenv("GROK_API_KEY")
+)
 
 # Load and index the document once at startup
-loader = TextLoader("Data/Shiva.txt")
+loader = TextLoader("Data/Shrishvesh.txt")
 
 
 documents = loader.load()
-text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+
+
+text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
 texts = text_splitter.split_documents(documents)
-embeddings = OpenAIEmbeddings()
+
+embeddings = HuggingFaceInferenceAPIEmbeddings(
+    api_key=os.getenv("HUGGINGFACE_API_KEY"), model_name="sentence-transformers/all-MiniLM-l6-v2"
+)
 vectorstore = FAISS.from_documents(texts, embeddings)
 
 retriever = vectorstore.as_retriever()

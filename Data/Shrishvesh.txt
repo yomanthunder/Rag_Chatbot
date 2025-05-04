@@ -1,0 +1,80 @@
+1. Contact Information
+Phone: +91 8828439199
+Email: reddyshrish518@gmail.com
+LinkedIn: linkedin.com/in/shrishvesh
+GitHub: github.com/yomanthunder
+
+2. Education
+Indian Institute of Technology, Roorkee
+B.Tech, Electrical Engineering
+Oct 2022 – Present
+Currently in 3rd Year
+CGPA: 7.40
+
+Narayana Junior College, Hyderabad
+Intermediate (Class XII)
+May 2020 – Aug 2022
+Percentage: 96%
+
+Narayana School, Hyderabad
+Matriculate (Class X)
+April 2019 – May 2020
+CGPA: 8.6
+
+3. Internships
+Gen AI Developer — Helozelo
+Jan 2025 – Present
+Developed and optimized data pipelines for efficient processing and management.
+Built AI agents using Composio to enhance automation.
+Integrated LangChain and Llama for AI-driven applications.
+Streamlined backend operations using Apache Airflow and Celery.
+Deployed pipelines on AWS.
+
+Blockchain Fellowship — Devfolio x Blocsoc, IIT Roorkee
+Dec 2023 – Jan 2024
+Learned about smart contracts, DAOs, Filecoin, DeFi, and Graph Protocol.
+Completed hands-on decentralized finance tasks.
+Won StackTooDeep Hackathon by building a peer-to-peer lending protocol.
+
+4. Academic Projects
+SyncTunnes — Syntax Error, SDSLabs
+Oct 2024 – Dec 2024
+Winner: Syntax Error Hackathon
+Built a real-time music sync tool for synchronized multi-device playback.
+Used MERN stack with WebSockets for timestamp sync and low-latency communication.
+
+DappHack — Blocsoc, IIT Roorkee
+Jan 2024 – Mar 2024
+Open-source contributor to a Web3 hackathon platform.
+Optimized smart contracts and implemented cross-chain testing.
+Improved prize pool logic and team-change handling.
+
+Decentralized Carpooling — MDG, IIT Roorkee
+Dec 2023 – Jan 2024
+Designed secure and transparent carpooling with smart contracts.
+Integrated real-time updates using WebSockets.
+Developed payment systems using Solidity.
+
+5. Achievements
+AIR 2034 – JEE Advanced 2021 (Top 0.8%)
+AIR 5031 – JEE Mains 2022 (Top 0.1%)
+Global Rank 1103 – Codeforces Div 4
+Global Rank 1113 – Codeforces Div 3
+Winner – StackTooDeep Hackathon (2024)
+Winner – Syntax Error Hackathon (2024)
+
+6. Extracurricular Activities / Positions of Responsibility
+Executive, Web Developer — Electrical Engineering Students Society (EESS)
+Apr 2022 – Oct 2024
+Secretary (Wellness) — RKB Bhawan
+Jul 2024 – Present
+Academic Council Member — IIT Roorkee
+2024 – Present
+
+7. Skills
+Programming Languages: C++, JavaScript, Python, Solidity
+Web & Software Stack: React.js, Node.js, Express.js, Redux, Postgres
+Developer Tools: Git, GitHub, Hardhat, Foundry, Chai, Mocha
+Platforms & Environments: Linux, AWS, Apache Airflow, Celery
+Blockchain & Web3: Smart Contracts, DeFi, Graph Protocol, Filecoin
+Languages Known: English, Hindi, Telugu
